@@ -14,9 +14,18 @@
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
 
+# Modify default theme（FROM uci-theme-bootstrap CHANGE TO luci-theme-bootstrap）
+sed -i 's/luci-theme-bootstrap/luci-theme-bootstrap/g' ./feeds/luci/collections/luci/Makefile
+
 # 修复核心及添加温度显示
 sed -i 's|pcdata(boardinfo.system or "?")|luci.sys.exec("uname -m") or "?"|g' feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_status/index.htm
 sed -i 's/or "1"%>/or "1"%> ( <%=luci.sys.exec("expr `cat \/sys\/class\/thermal\/thermal_zone0\/temp` \/ 1000") or "?"%> \&#8451; ) /g' feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_status/index.htm
+
+# 设置版本
+sed -i "s|DISTRIB_REVISION='.*'|DISTRIB_REVISION='R$(date +%Y.%m.%d)'|g" package/lean/default-settings/files/zzz-default-settings
+
+# ttyd 自动登录
+sed -i "s?/bin/login?/usr/libexec/login.sh?g" ${GITHUB_WORKSPACE}/openwrt/package/feeds/packages/ttyd/files/ttyd.config
 
 # Add luci-app-ssr-plus
 # pushd package/lean
@@ -64,6 +73,7 @@ rm -rf ../lean/luci-app-docker
 git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
 git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
 rm -rf ../lean/luci-theme-argon
+rm -rf ../lean/luci-theme-bootstrap
 
 # Add subconverter
 # git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
@@ -90,9 +100,6 @@ git clone --depth=1 https://github.com/sensec/luci-app-xlnetacc
 # svn co https://github.com/openwrt/packages/trunk/utils/apk
 popd
 
-# 设置版本
-sed -i "s|DISTRIB_REVISION='.*'|DISTRIB_REVISION='R$(date +%Y.%m.%d)'|g" package/lean/default-settings/files/zzz-default-settings
-
 # Use Lienol's https-dns-proxy package
 pushd feeds/packages/net
 rm -rf https-dns-proxy
@@ -105,13 +112,9 @@ rm -rf syncthing
 svn co https://github.com/openwrt/packages/trunk/utils/syncthing
 popd
 
-# 优化
+# patch
 pushd ${GITHUB_WORKSPACE}/openwrt
 cp -a ${GITHUB_WORKSPACE}/0003-upx-ucl-21.02.patch ${GITHUB_WORKSPACE}/openwrt
 cat 0003-upx-ucl-21.02.patch | patch -p1 > /dev/null 2>&1
 popd
-
-# ttyd 自动登录
-sed -i "s?/bin/login?/usr/libexec/login.sh?g" ${GITHUB_WORKSPACE}/openwrt/package/feeds/packages/ttyd/files/ttyd.config
-
 
