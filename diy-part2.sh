@@ -19,9 +19,9 @@ sed -i 's|pcdata(boardinfo.system or "?")|luci.sys.exec("uname -m") or "?"|g' fe
 sed -i 's/or "1"%>/or "1"%> ( <%=luci.sys.exec("expr `cat \/sys\/class\/thermal\/thermal_zone0\/temp` \/ 1000") or "?"%> \&#8451; ) /g' feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_status/index.htm
 
 # Add luci-app-ssr-plus
-pushd package/lean
-git clone --depth=1 https://github.com/fw876/helloworld
-popd
+# pushd package/lean
+# git clone --depth=1 https://github.com/fw876/helloworld
+# popd
 
 # Clone community packages to package/community
 mkdir package/community
@@ -32,31 +32,31 @@ git clone --depth=1 https://github.com/Lienol/openwrt-package
 rm -rf ../lean/luci-app-kodexplorer
 
 # Add luci-app-passwall
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
+# git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
 
 # Add luci-app-vssr <M>
-git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git
-git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr
+# git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git
+# git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr
 
 # Add luci-proto-minieap
-git clone --depth=1 https://github.com/ysc3839/luci-proto-minieap
+# git clone --depth=1 https://github.com/ysc3839/luci-proto-minieap
 
 # Add ServerChan
-git clone --depth=1 https://github.com/tty228/luci-app-serverchan
+# git clone --depth=1 https://github.com/tty228/luci-app-serverchan
 
 # Add OpenClash
 git clone --depth=1 -b master https://github.com/vernesong/OpenClash
 
 # Add luci-app-onliner
-git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner
+# git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner
 
 # Add luci-app-diskman
-git clone --depth=1 https://github.com/SuLingGG/luci-app-diskman
-mkdir parted
-cp luci-app-diskman/Parted.Makefile parted/Makefile
+# git clone --depth=1 https://github.com/SuLingGG/luci-app-diskman
+# mkdir parted
+# cp luci-app-diskman/Parted.Makefile parted/Makefile
 
 # Add luci-app-dockerman
-rm -rf ../lean/luci-app-docker
+# rm -rf ../lean/luci-app-docker
 git clone --depth=1 https://github.com/lisaac/luci-app-dockerman
 git clone --depth=1 https://github.com/lisaac/luci-lib-docker
 
@@ -66,18 +66,18 @@ git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
 rm -rf ../lean/luci-theme-argon
 
 # Add subconverter
-git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
+# git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
 
 # Add luci-udptools
-svn co https://github.com/zcy85611/Openwrt-Package/trunk/luci-udptools
-svn co https://github.com/zcy85611/Openwrt-Package/trunk/udp2raw
-svn co https://github.com/zcy85611/Openwrt-Package/trunk/udpspeeder-tunnel
+# svn co https://github.com/zcy85611/Openwrt-Package/trunk/luci-udptools
+# svn co https://github.com/zcy85611/Openwrt-Package/trunk/udp2raw
+# svn co https://github.com/zcy85611/Openwrt-Package/trunk/udpspeeder-tunnel
 
 # Add OpenAppFilter
-git clone --depth 1 -b oaf-3.0.1 https://github.com/destan19/OpenAppFilter.git
+# git clone --depth 1 -b oaf-3.0.1 https://github.com/destan19/OpenAppFilter.git
 
 # Add luci-app-oled (R2S Only)
-git clone --depth=1 https://github.com/NateLol/luci-app-oled
+# git clone --depth=1 https://github.com/NateLol/luci-app-oled
 
 # Add luci-app-adguardhome
 git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome
