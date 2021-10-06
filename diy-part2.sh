@@ -64,6 +64,7 @@ rm -rf ../lean/luci-app-docker
 git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
 git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
 rm -rf ../lean/luci-theme-argon
+rm -rf ../lean/luci-theme-bootstrap
 
 # Add subconverter
 # git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
@@ -80,7 +81,8 @@ rm -rf ../lean/luci-theme-argon
 # git clone --depth=1 https://github.com/NateLol/luci-app-oled
 
 # Add luci-app-adguardhome
-git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome
+rm -rf ../lean/luci-app-adguardhome
+svn co https://github.com/kongfl888/openwrt-packages/trunk/luci-app-adguardhome
 
 # Add luci-app-xlnetac
 git clone --depth=1 https://github.com/sensec/luci-app-xlnetacc
