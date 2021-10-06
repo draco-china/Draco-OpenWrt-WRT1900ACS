@@ -96,6 +96,14 @@ svn co https://github.com/Hyy2001X/AutoBuild-Packages/trunk/luci-app-adguardhome
 # Add luci-app-xlnetac
 git clone --depth=1 https://github.com/sensec/luci-app-xlnetacc
 
+# Add luci-app-smartdns
+rm -rf ../lean/luci-app-smartdns
+svn checkout https://github.com/kenzok8/openwrt-packages/trunk/luci-app-smartdns
+
+# Add luci-app-eqos
+rm -rf ../lean/luci-app-eqos
+svn checkout https://github.com/kenzok8/openwrt-packages/trunk/luci-app-eqos
+
 # Add apk (Apk Packages Manager)
 # svn co https://github.com/openwrt/packages/trunk/utils/apk
 popd
