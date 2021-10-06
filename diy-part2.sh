@@ -89,7 +89,7 @@ git clone --depth=1 https://github.com/sensec/luci-app-xlnetacc
 
 # Add apk (Apk Packages Manager)
 # svn co https://github.com/openwrt/packages/trunk/utils/apk
-# popd
+popd
 
 # 设置版本
 sed -i "s|DISTRIB_REVISION='.*'|DISTRIB_REVISION='R$(date +%Y.%m.%d)'|g" package/lean/default-settings/files/zzz-default-settings
