@@ -88,8 +88,8 @@ svn co https://github.com/kongfl888/openwrt-packages/trunk/luci-app-adguardhome
 git clone --depth=1 https://github.com/sensec/luci-app-xlnetacc
 
 # Add apk (Apk Packages Manager)
-svn co https://github.com/openwrt/packages/trunk/utils/apk
-popd
+# svn co https://github.com/openwrt/packages/trunk/utils/apk
+# popd
 
 # Mod zzz-default-settings
 pushd package/lean/default-settings/files
