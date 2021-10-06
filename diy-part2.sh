@@ -82,6 +82,9 @@ git clone --depth=1 https://github.com/NateLol/luci-app-oled
 # Add luci-app-adguardhome
 git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome
 
+# Add luci-app-adguardhome
+git clone --depth=1 https://github.com/sensec/luci-app-xlnetac
+
 # Add extra wireless drivers
 svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/rtl8812au-ac
 svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/rtl8821cu
