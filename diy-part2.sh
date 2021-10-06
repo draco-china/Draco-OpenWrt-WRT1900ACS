@@ -106,11 +106,11 @@ popd
 # ttyd 自动登录
 sed -i "s?/bin/login?/usr/libexec/login.sh?g" ${GITHUB_WORKSPACE}/openwrt/package/feeds/packages/ttyd/files/ttyd.config
 
-# Set DISTRIB_REVISION
-sed -i "s|DISTRIB_REVISION='.*'|DISTRIB_REVISION='R$(date +%Y.%m.%d)'|g" package/lean/default-settings/files/zzz-default-settings
-
 # 优化
 pushd ${GITHUB_WORKSPACE}/openwrt
 copy -f ${GITHUB_WORKSPACE}/0003-upx-ucl-21.02.patch ${GITHUB_WORKSPACE}/openwrt
 cat 0003-upx-ucl-21.02.patch | patch -p1 > /dev/null 2>&1
 popd
+
+# 设置版本
+sed -i "s|DISTRIB_REVISION='.*'|DISTRIB_REVISION='R$(date +%Y.%m.%d)'|g" package/lean/default-settings/files/zzz-default-settings
