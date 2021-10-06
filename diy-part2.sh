@@ -18,6 +18,10 @@ sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_genera
 sed -i 's|pcdata(boardinfo.system or "?")|luci.sys.exec("uname -m") or "?"|g' feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_status/index.htm
 sed -i 's/or "1"%>/or "1"%> ( <%=luci.sys.exec("expr `cat \/sys\/class\/thermal\/thermal_zone0\/temp` \/ 1000") or "?"%> \&#8451; ) /g' feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_status/index.htm
 
+# 优化
+Copy ${GITHUB_WORKSPACE}/Patches/0003-upx-ucl-21.02.patch ${GITHUB_WORKSPACE}/openwrt
+cat 0003-upx-ucl-21.02.patch | patch -p1 > /dev/null 2>&1
+
 # Add luci-app-ssr-plus
 # pushd package/lean
 # git clone --depth=1 https://github.com/fw876/helloworld
@@ -110,6 +114,8 @@ rm -rf syncthing
 svn co https://github.com/openwrt/packages/trunk/utils/syncthing
 popd
 
+# ttyd 自动登录
 sed -i "s?/bin/login?/usr/libexec/login.sh?g" ${GITHUB_WORKSPACE}/openwrt/package/feeds/packages/ttyd/files/ttyd.config
+
 # Change default shell to zsh
 # sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
