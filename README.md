@@ -11,7 +11,7 @@
 - IP:`192.168.10.1`
 - 用户名:`root`
 - 密码:`password`
-- WI-FI:`OpenWrt_2.4G` `OpenWrt_5G`
+- WI-FI:`OpenWrt`
 - WI-FI密码: `none`
 
 ## Credits
