@@ -83,7 +83,7 @@ rm -rf ../lean/luci-theme-argon
 git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome
 
 # Add luci-app-xlnetac
-git clone --depth=1 https://github.com/sensec/luci-app-xlnetac
+git clone --depth=1 https://github.com/sensec/luci-app-xlnetacc
 
 # Add apk (Apk Packages Manager)
 svn co https://github.com/openwrt/packages/trunk/utils/apk
