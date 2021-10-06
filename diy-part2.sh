@@ -108,7 +108,7 @@ sed -i "s?/bin/login?/usr/libexec/login.sh?g" ${GITHUB_WORKSPACE}/openwrt/packag
 
 # 优化
 pushd ${GITHUB_WORKSPACE}/openwrt
-copy -f ${GITHUB_WORKSPACE}/0003-upx-ucl-21.02.patch ${GITHUB_WORKSPACE}/openwrt
+cp -a ${GITHUB_WORKSPACE}/0003-upx-ucl-21.02.patch ${GITHUB_WORKSPACE}/openwrt
 cat 0003-upx-ucl-21.02.patch | patch -p1 > /dev/null 2>&1
 popd
 
