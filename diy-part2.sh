@@ -37,8 +37,8 @@ mkdir package/community
 pushd package/community
 
 # Add Lienol's Packages
-# git clone --depth=1 https://github.com/Lienol/openwrt-package
-# rm -rf ../lean/luci-app-kodexplorer
+git clone --depth=1 https://github.com/Lienol/openwrt-package
+rm -rf ../lean/luci-app-kodexplorer
 
 # Add luci-app-passwall
 # git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
@@ -105,7 +105,7 @@ rm -rf ../lean/luci-app-eqos
 svn checkout https://github.com/kenzok8/openwrt-packages/trunk/luci-app-eqos
 
 # Add apk (Apk Packages Manager)
-# svn co https://github.com/openwrt/packages/trunk/utils/apk
+svn co https://github.com/openwrt/packages/trunk/utils/apk
 popd
 
 # Use Lienol's https-dns-proxy package
