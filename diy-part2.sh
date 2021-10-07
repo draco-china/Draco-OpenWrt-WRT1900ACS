@@ -48,21 +48,21 @@ rm -rf ../lean/luci-app-kodexplorer
 # git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr
 
 # Add luci-proto-minieap
-# git clone --depth=1 https://github.com/ysc3839/luci-proto-minieap
+git clone --depth=1 https://github.com/ysc3839/luci-proto-minieap
 
 # Add ServerChan
-# git clone --depth=1 https://github.com/tty228/luci-app-serverchan
+git clone --depth=1 https://github.com/tty228/luci-app-serverchan
 
 # Add OpenClash
 git clone --depth=1 -b master https://github.com/vernesong/OpenClash
 
 # Add luci-app-onliner
-# git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner
+git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner
 
 # Add luci-app-diskman
-# git clone --depth=1 https://github.com/SuLingGG/luci-app-diskman
+git clone --depth=1 https://github.com/SuLingGG/luci-app-diskman
 # mkdir parted
-# cp luci-app-diskman/Parted.Makefile parted/Makefile
+cp luci-app-diskman/Parted.Makefile parted/Makefile
 
 # Add luci-app-dockerman
 rm -rf ../lean/luci-app-docker
@@ -76,18 +76,18 @@ git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
 git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
 
 # Add subconverter
-# git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
+git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
 
 # Add luci-udptools
-# svn co https://github.com/zcy85611/Openwrt-Package/trunk/luci-udptools
-# svn co https://github.com/zcy85611/Openwrt-Package/trunk/udp2raw
-# svn co https://github.com/zcy85611/Openwrt-Package/trunk/udpspeeder-tunnel
+svn co https://github.com/zcy85611/Openwrt-Package/trunk/luci-udptools
+svn co https://github.com/zcy85611/Openwrt-Package/trunk/udp2raw
+svn co https://github.com/zcy85611/Openwrt-Package/trunk/udpspeeder-tunnel
 
 # Add OpenAppFilter
-# git clone --depth 1 -b oaf-3.0.1 https://github.com/destan19/OpenAppFilter.git
+git clone --depth 1 -b oaf-3.0.1 https://github.com/destan19/OpenAppFilter.git
 
 # Add luci-app-oled (R2S Only)
-# git clone --depth=1 https://github.com/NateLol/luci-app-oled
+git clone --depth=1 https://github.com/NateLol/luci-app-oled
 
 # Add luci-app-adguardhome
 rm -rf ../lean/luci-app-adguardhome
