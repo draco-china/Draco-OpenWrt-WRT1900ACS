@@ -40,6 +40,9 @@ pushd package/community
 git clone --depth=1 https://github.com/Lienol/openwrt-package
 rm -rf ../lean/luci-app-kodexplorer
 
+# Add kenzok8 Packages
+git clone --depth=1 https://github.com/kenzok8/openwrt-packages
+ 
 # Add luci-app-passwall
 # git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
 
@@ -93,16 +96,8 @@ git clone --depth=1 https://github.com/NateLol/luci-app-oled
 rm -rf ../lean/luci-app-adguardhome
 svn co https://github.com/Hyy2001X/AutoBuild-Packages/trunk/luci-app-adguardhome
 
-# Add luci-app-xlnetac
+# Add luci-app-xlnetacc
 git clone --depth=1 https://github.com/sensec/luci-app-xlnetacc
-
-# Add luci-app-smartdns
-rm -rf ../lean/luci-app-smartdns
-svn checkout https://github.com/kenzok8/openwrt-packages/trunk/luci-app-smartdns
-
-# Add luci-app-eqos
-rm -rf ../lean/luci-app-eqos
-svn checkout https://github.com/kenzok8/openwrt-packages/trunk/luci-app-eqos
 
 # Add apk (Apk Packages Manager)
 svn co https://github.com/openwrt/packages/trunk/utils/apk
