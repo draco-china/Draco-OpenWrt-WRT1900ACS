@@ -43,6 +43,10 @@ pushd package/community
 # Add kenzok8 Packages
 git clone --depth=1 https://github.com/kenzok8/openwrt-packages .
 rm -rf .git
+rm -rf ./luci-app-bypass
+rm -rf ./luci-app-passwall
+rm -rf ./luci-app-ssr-plus
+rm -rf ./luci-app-argon-config
  
 # Add luci-app-passwall
 # git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
@@ -77,7 +81,6 @@ rm -rf ../lean/luci-app-docker
 rm -rf ../lean/luci-theme-argon
 rm -rf ../lean/luci-theme-bootstrap
 rm -rf ./luci-theme-argon
-rm -rf ./luci-app-argon-config
 git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
 git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
 
