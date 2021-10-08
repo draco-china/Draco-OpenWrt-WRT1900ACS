@@ -37,17 +37,17 @@ mkdir package/community
 pushd package/community
 
 # Add Lienol's Packages
-# git clone --depth=1 https://github.com/Lienol/openwrt-package
-# rm -rf ../lean/luci-app-kodexplorer
+git clone --depth=1 https://github.com/Lienol/openwrt-package
+rm -rf ../lean/luci-app-kodexplorer
 
 # Add kenzok8 Packages
-git clone --depth=1 https://github.com/kenzok8/openwrt-packages .
+git clone --depth=1 https://github.com/kenzok8/openwrt-packages
 rm -rf .git
-rm -rf ./luci-app-vssr
-rm -rf ./luci-app-bypass
-rm -rf ./luci-app-passwall
-rm -rf ./luci-app-ssr-plus
-rm -rf ./luci-app-argon-config
+rm -rf ./openwrt-packages/luci-app-vssr
+rm -rf ./openwrt-packages/luci-app-bypass
+rm -rf ./openwrt-packages/luci-app-passwall
+rm -rf ./openwrt-packages/luci-app-ssr-plus
+rm -rf ./openwrt-packages/luci-app-argon-config
  
 # Add luci-app-passwall
 # git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
