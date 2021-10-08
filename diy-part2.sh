@@ -41,11 +41,7 @@ pushd package/community
 # rm -rf ../lean/luci-app-kodexplorer
 
 # Add kenzok8 Packages
-git clone --depth=1 https://github.com/kenzok8/openwrt-packages
-rm -rf ./openwrt-packages/luci-app-bypass
-rm -rf ./openwrt-packages/luci-app-passwall
-rm -rf ./openwrt-packages/luci-app-vssr
-rm -rf ./openwrt-packages/luci-app-ssr-plus
+git clone --depth=1 https://github.com/kenzok8/openwrt-packages .
  
 # Add luci-app-passwall
 # git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
@@ -63,6 +59,9 @@ rm -rf ./openwrt-packages/luci-app-ssr-plus
 # Add luci-app-onliner
 # git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner
 
+# Add luci-app-xlnetacc
+git clone --depth=1 https://github.com/sensec/luci-app-xlnetacc
+
 # Add luci-app-diskman
 git clone --depth=1 https://github.com/SuLingGG/luci-app-diskman
 mkdir parted
@@ -74,11 +73,12 @@ rm -rf ../lean/luci-app-docker
 # git clone --depth=1 https://github.com/lisaac/luci-lib-docker
 
 # Add luci-theme-argon
-git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
-git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
 rm -rf ../lean/luci-theme-argon
 rm -rf ../lean/luci-theme-bootstrap
-rm -rf ./openwrt-package/luci-app-argon-config
+rm -rf ./luci-theme-argon
+rm -rf ./luci-app-argon-config
+git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
+git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
 
 # Add subconverter
 # git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
@@ -93,9 +93,6 @@ rm -rf ./openwrt-package/luci-app-argon-config
 
 # Add luci-app-oled (R2S Only)
 # git clone --depth=1 https://github.com/NateLol/luci-app-oled
-
-# Add luci-app-xlnetacc
-git clone --depth=1 https://github.com/sensec/luci-app-xlnetacc
 
 # Add apk (Apk Packages Manager)
 svn co https://github.com/openwrt/packages/trunk/utils/apk
