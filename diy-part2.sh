@@ -98,7 +98,7 @@ rm -rf ./openwrt-package/luci-app-argon-config
 git clone --depth=1 https://github.com/sensec/luci-app-xlnetacc
 
 # Add apk (Apk Packages Manager)
-# svn co https://github.com/openwrt/packages/trunk/utils/apk
+svn co https://github.com/openwrt/packages/trunk/utils/apk
 popd
 
 # Use Lienol's https-dns-proxy package
