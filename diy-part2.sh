@@ -41,13 +41,13 @@ git clone --depth=1 https://github.com/Lienol/openwrt-package
 rm -rf ../lean/luci-app-kodexplorer
 
 # Add kenzok8 Packages
-git clone --depth=1 https://github.com/kenzok8/openwrt-packages
+git clone --depth=1 https://github.com/kenzok8/openwrt-packages 
 rm -rf ./openwrt-packages/luci-app-vssr
 rm -rf ./openwrt-packages/luci-app-bypass
 rm -rf ./openwrt-packages/luci-app-passwall
 rm -rf ./openwrt-packages/luci-app-ssr-plus
 rm -rf ./openwrt-packages/luci-app-argon-config
- 
+
 # Add luci-app-passwall
 # git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
 
@@ -56,13 +56,13 @@ rm -rf ./openwrt-packages/luci-app-argon-config
 # git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr
 
 # Add luci-proto-minieap
-git clone --depth=1 https://github.com/ysc3839/luci-proto-minieap
+# git clone --depth=1 https://github.com/ysc3839/luci-proto-minieap
 
 # Add ServerChan
 # git clone --depth=1 https://github.com/tty228/luci-app-serverchan
 
 # Add luci-app-onliner
-# git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner
+git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner
 
 # Add luci-app-xlnetacc
 git clone --depth=1 https://github.com/sensec/luci-app-xlnetacc
@@ -74,8 +74,8 @@ cp luci-app-diskman/Parted.Makefile parted/Makefile
 
 # Add luci-app-dockerman
 rm -rf ../lean/luci-app-docker
-# git clone --depth=1 https://github.com/lisaac/luci-app-dockerman
-# git clone --depth=1 https://github.com/lisaac/luci-lib-docker
+git clone --depth=1 https://github.com/lisaac/luci-app-dockerman
+git clone --depth=1 https://github.com/lisaac/luci-lib-docker
 
 # Add luci-theme-argon
 rm -rf ../lean/luci-theme-argon
@@ -97,6 +97,13 @@ svn co https://github.com/zcy85611/Openwrt-Package/trunk/udpspeeder-tunnel
 
 # Add luci-app-oled (R2S Only)
 # git clone --depth=1 https://github.com/NateLol/luci-app-oled
+
+# Add extra wireless drivers
+svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/rtl8812au-ac
+svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/rtl8821cu
+svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/rtl8188eu
+svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/rtl8192du
+svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/rtl88x2bu
 
 # Add apk (Apk Packages Manager)
 svn co https://github.com/openwrt/packages/trunk/utils/apk
