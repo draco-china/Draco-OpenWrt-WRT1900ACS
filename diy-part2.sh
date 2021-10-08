@@ -43,6 +43,7 @@ pushd package/community
 # Add kenzok8 Packages
 git clone --depth=1 https://github.com/kenzok8/openwrt-packages .
 rm -rf .git
+rm -rf ./luci-app-vssr
 rm -rf ./luci-app-bypass
 rm -rf ./luci-app-passwall
 rm -rf ./luci-app-ssr-plus
