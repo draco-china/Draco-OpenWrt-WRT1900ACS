@@ -42,7 +42,6 @@ rm -rf ../lean/luci-app-kodexplorer
 
 # Add kenzok8 Packages
 git clone --depth=1 https://github.com/kenzok8/openwrt-packages
-rm -rf .git
 rm -rf ./openwrt-packages/luci-app-vssr
 rm -rf ./openwrt-packages/luci-app-bypass
 rm -rf ./openwrt-packages/luci-app-passwall
