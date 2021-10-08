@@ -37,8 +37,8 @@ mkdir package/community
 pushd package/community
 
 # Add Lienol's Packages
-# git clone --depth=1 https://github.com/Lienol/openwrt-package
-# rm -rf ../lean/luci-app-kodexplorer
+git clone --depth=1 https://github.com/Lienol/openwrt-package .
+rm -rf ../lean/luci-app-kodexplorer
 
 # Add kenzok8 Packages
 git clone --depth=1 https://github.com/kenzok8/openwrt-packages .
@@ -51,7 +51,7 @@ git clone --depth=1 https://github.com/kenzok8/openwrt-packages .
 # git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr
 
 # Add luci-proto-minieap
-# git clone --depth=1 https://github.com/ysc3839/luci-proto-minieap
+git clone --depth=1 https://github.com/ysc3839/luci-proto-minieap
 
 # Add ServerChan
 # git clone --depth=1 https://github.com/tty228/luci-app-serverchan
