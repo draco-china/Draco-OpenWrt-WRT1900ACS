@@ -13,6 +13,9 @@
 - 密码:`password`
 - WI-FI:`OpenWrt`
 - WI-FI密码: `none`
+- 北京时间每天 `0:00` 定时编译，`Release` 中只保留最新版本
+- 历史版本在 `Actions` 中选择一个已经运行完成且成功的 `workflow` 在页面底部可以看到 `Annotations` 和 `Artifacts`
+- `Annotations` 中的网盘失效时间一般是 1-3 天, `Artifacts` 需要登录 Github 才能下载
 
 ## Credits
 
