@@ -17,6 +17,10 @@
 - 历史版本在 `Actions` 中选择一个已经运行完成且成功的 `workflow` 在页面底部可以看到 `Annotations` 和 `Artifacts`
 - `Annotations` 中的网盘失效时间一般是 1-3 天, `Artifacts` 需要登录 Github 才能下载
 
+## 空间不足？
+
+- [overlay 扩容](https://www.techkoala.top/openwrt_resize/)
+
 ## Credits
 
 - [Microsoft Azure](https://azure.microsoft.com)
