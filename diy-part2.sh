@@ -47,6 +47,11 @@ rm -rf ./openwrt-packages/luci-app-bypass
 rm -rf ./openwrt-packages/luci-app-passwall
 rm -rf ./openwrt-packages/luci-app-ssr-plus
 rm -rf ./openwrt-packages/luci-app-argon-config
+rm -rf ./openwrt-packages/luci-app-luci-app-adguardhome
+
+# Add luci-app-adguardhome
+rm -rf ../lean/luci-app-adguardhome
+svn co https://github.com/Hyy2001X/AutoBuild-Packages/trunk/luci-app-adguardhome
 
 # Add luci-app-passwall
 # git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
