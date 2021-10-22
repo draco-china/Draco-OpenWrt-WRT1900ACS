@@ -17,7 +17,8 @@ sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_genera
 sed -i 's/OpenWrt/DracoOpenWrt/g' package/base-files/files/bin/config_generate
 
 # 修改 banner 文件（banner 文件在根目录）
-rm -rf package/base-files/files/etc/banner && cd .. && cp -f ./banner package/base-files/files/etc/ && cd openwrt
+rm -rf package/base-files/files/etc/banner 
+cp -f ${GITHUB_WORKSPACE}/banner package/base-files/files/etc/
 
 # 修复核心及添加温度显示
 sed -i 's|pcdata(boardinfo.system or "?")|luci.sys.exec("uname -m") or "?"|g' feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_status/index.htm
