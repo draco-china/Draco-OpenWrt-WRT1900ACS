@@ -20,8 +20,10 @@ sed -i 's/OpenWrt/DracoOpenWrt/g' package/base-files/files/bin/config_generate
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' ./feeds/luci/collections/luci/Makefile
 
 # 修改 banner 文件（banner 文件在根目录）
-rm -rf package/base-files/files/etc/banner 
-cp -f ${GITHUB_WORKSPACE}/banner package/base-files/files/etc/
+pushd package/base-files/files/etc
+rm -rf ./banner 
+cp -r ${GITHUB_WORKSPACE}/banner .
+popd
 
 # 修复核心及添加温度显示
 sed -i 's|pcdata(boardinfo.system or "?")|luci.sys.exec("uname -m") or "?"|g' feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_status/index.htm
