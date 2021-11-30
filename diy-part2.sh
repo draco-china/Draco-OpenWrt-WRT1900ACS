@@ -30,11 +30,11 @@ git clone --depth=1 -b master https://github.com/vernesong/OpenClash
 mkdir package/community
 pushd package/community
 
+
 # Add Lienol's Packages
+git clone --depth=1 https://github.com/Lienol/openwrt-package -b other .
 git clone --depth=1 https://github.com/Lienol/openwrt-package
 rm -rf ../lean/luci-app-kodexplorer
-
-git clone --depth=1 https://github.com/Lienol/openwrt-package -b other
 
 # Add kenzok8 Packages
 git clone --depth=1 https://github.com/kenzok8/openwrt-packages
