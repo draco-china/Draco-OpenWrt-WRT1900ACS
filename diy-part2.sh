@@ -26,11 +26,6 @@ sed -i 's/or "1"%>/or "1"%> ( <%=luci.sys.exec("expr `cat \/sys\/class\/thermal\
 # Add OpenClash
 git clone --depth=1 -b master https://github.com/vernesong/OpenClash
 
-# Add luci-app-ssr-plus
-# pushd package/lean
-# git clone --depth=1 https://github.com/fw876/helloworld
-# popd
-
 # Clone community packages to package/community
 mkdir package/community
 pushd package/community
@@ -46,9 +41,6 @@ git clone --depth=1 https://github.com/kenzok8/openwrt-packages
 git clone --depth=1 https://github.com/sensec/luci-app-xlnetacc
 rm -rf ../lean/luci-app-xlnetacc
 
-# Add luci-app-passwall
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
-
 # Add luci-app-vssr <M>
 git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git
 git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr
@@ -58,9 +50,6 @@ git clone --depth=1 https://github.com/ysc3839/luci-proto-minieap
 
 # Add ServerChan
 git clone --depth=1 https://github.com/tty228/luci-app-serverchan
-
-# Add OpenClash
-git clone --depth=1 -b master https://github.com/vernesong/OpenClash
 
 # Add luci-app-onliner
 git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner
